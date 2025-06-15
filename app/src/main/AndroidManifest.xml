@@ -35,8 +35,8 @@
         <activity android:name=".view.act.CheckoutActivity"/>
         <activity android:name=".view.act.DetailOrderAdminActivity"/>
         <activity android:name=".view.act.DetailOrderClientActivity"/>
-        <activity android:name=".view.act.MOMOActivity"/>
         <activity android:name=".view.act.VNPAYActivity"/>
+        <activity android:name=".view.act.MOMOActivity"/>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/api_key"
