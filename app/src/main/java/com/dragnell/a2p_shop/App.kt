@@ -10,10 +10,6 @@ class App : Application() {
         instance = this
     }
 
-    fun getStorageInstance(): Storage {
-        return storage
-    }
-
     companion object {
         private lateinit var instance: App
 

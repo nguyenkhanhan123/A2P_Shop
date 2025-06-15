@@ -9,9 +9,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+    android:id="@+id/lnMain"
     android:paddingHorizontal="12dp"
     >
 <TextView
+    android:id="@+id/recentSearch"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_weight="1"

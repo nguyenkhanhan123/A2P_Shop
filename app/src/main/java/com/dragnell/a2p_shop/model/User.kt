@@ -12,5 +12,6 @@ data class User(
     @SerializedName("deleted") val deleted: Boolean,
     @SerializedName("createdAt") val createdAt: String,
     @SerializedName("updatedAt") val updatedAt: String,
-    @SerializedName("__v") val version: Int
+    @SerializedName("__v") val version: Int,
+    @SerializedName("phone") val phone: Int
 ): Serializable

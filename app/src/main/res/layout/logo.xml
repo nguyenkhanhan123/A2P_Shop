@@ -11,8 +11,9 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito_bold"
         android:text="@string/a2p"
+        android:layout_gravity="bottom"
         android:textColor="@color/cyan"
-        android:textSize="32sp" />
+        android:textSize="29sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,5 +22,5 @@
         android:text="@string/shop"
         android:layout_gravity="bottom"
         android:textColor="@color/white"
-        android:textSize="28sp" />
+        android:textSize="26sp" />
 </LinearLayout>

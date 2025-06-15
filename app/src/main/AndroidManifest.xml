@@ -27,12 +27,24 @@
             </intent-filter>
         </activity>
         <activity android:name=".view.act.SignUp" />
-        <activity android:name=".view.act.MainActivity"/>
+        <activity android:name=".view.act.MainClientActivity"/>
         <activity android:name=".view.act.Search"/>
+        <activity android:name=".view.act.DetailProduct"/>
+        <activity android:name=".view.act.MainAdminActivity"/>
+        <activity android:name=".view.act.ProductActivity"/>
+        <activity android:name=".view.act.CheckoutActivity"/>
+        <activity android:name=".view.act.DetailOrderAdminActivity"/>
+        <activity android:name=".view.act.DetailOrderClientActivity"/>
+        <activity android:name=".view.act.VNPAYActivity"/>
+        <activity android:name=".view.act.MOMOActivity"/>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/api_key"
             />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3053284259363818~5312071819"/>
+
     </application>
 
 </manifest>

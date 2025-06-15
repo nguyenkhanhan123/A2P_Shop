@@ -7,4 +7,8 @@
     <color name="cyan">#23D4B5</color>
     <color name="red">#EE4E4E</color>
     <color name="not">#00FFFFFF</color>
+    <color name="yellow">#EBEF16</color>
+    <color name="orange">#FFCB46</color>
+    <color name="whiteblack">#525252</color>
+    <color name="bgdialog">#F2F2F7</color>
 </resources>

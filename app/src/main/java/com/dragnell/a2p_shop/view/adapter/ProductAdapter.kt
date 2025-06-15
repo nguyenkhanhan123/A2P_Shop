@@ -11,9 +11,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.dragnell.a2p_shop.R
+import com.dragnell.a2p_shop.model.Category
 import com.dragnell.a2p_shop.model.Product
 
-class ProductAdapter(private var list: List<Product>, private var context: Context) :
+class ProductAdapter(private var list: List<Product>, private var context: Context, private val onClickFolder: (String) -> Unit,private val onLongClickFolder: (Product) -> Unit) :
     RecyclerView.Adapter<ProductAdapter.ProductHolder>() {
         
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductHolder {
@@ -24,11 +25,18 @@ class ProductAdapter(private var list: List<Product>, private var context: Conte
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ProductHolder, position: Int) {
         val product: Product = list[position]
-        holder.itemProduct.tag=product.id
         Glide.with(context).load(product.thumbnail).into(holder.ivProduct)
         holder.nameProduct.text=product.title
         holder.cost.text="$ ${product.price}"
-        holder.totalCost.text="$ ${product.price-product.discountPercentage}"
+        val discountedPrice = (product.price * (1 - product.discountPercentage.toDouble() / 100)).toInt()
+        holder.totalCost.text = "$ $discountedPrice"
+        holder.itemProduct.setOnClickListener {
+            onClickFolder(product.slug.toString())
+        }
+        holder.itemProduct.setOnLongClickListener {
+            onLongClickFolder(product)
+            true
+        }
     }
 
     override fun getItemCount(): Int {

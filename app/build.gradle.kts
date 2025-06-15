@@ -50,8 +50,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation (libs.play.services.maps)
     implementation (libs.retrofit)
     implementation (libs.converter.gson)
     implementation (libs.glide)
+    implementation (libs.play.services.ads)
+    implementation (libs.play.services.maps)
+    implementation (libs.androidx.viewpager2)
 }

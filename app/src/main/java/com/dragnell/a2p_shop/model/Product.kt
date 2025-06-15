@@ -6,6 +6,8 @@ import java.util.Date
 
 data class Product(
     @SerializedName("_id") val id: String,
+    @SerializedName("product_category_id") val productCategoryId: String?,
+    @SerializedName("slug") val slug: String? = null,
     @SerializedName("title") val title: String,
     @SerializedName("description") val description: String,
     @SerializedName("price") val price: Int,
@@ -15,8 +17,6 @@ data class Product(
     @SerializedName("status") val status: String,
     @SerializedName("position") val position: Int,
     @SerializedName("deleted") val deleted: Boolean,
-    @SerializedName("product_category_id") val productCategoryId: String?,
-    @SerializedName("slug") val slug: String? = null,
     @SerializedName("createdAt") val createdAt: Date? = null,
     @SerializedName("updatedAt") val updatedAt: Date? = null,
     @SerializedName("__v") val version: Int,

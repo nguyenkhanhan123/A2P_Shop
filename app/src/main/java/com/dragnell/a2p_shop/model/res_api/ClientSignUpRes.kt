@@ -5,7 +5,5 @@ import java.io.Serializable
 
 data class ClientSignUpRes(
     @SerializedName("code")
-    val code: Int,
-    @SerializedName("token")
-    val token: String
+    val code: Int
 ):Serializable
