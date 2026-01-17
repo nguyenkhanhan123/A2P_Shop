@@ -94,44 +94,5 @@ class AddCategoriesDialog(
         })
     }
 
-    private fun callAddCategory() {
-        val apiInterface: ApiInterface = Api.client.create(ApiInterface::class.java)
-        apiInterface.addCategories(
-            CategoryAddReq(
-                mbinding.title.text.toString().trim(),
-                parentId.toString().trim(),
-                mbinding.describe.text.toString().trim(),
-                mbinding.thumbnail.text.toString().trim(),
-                "active"
-            ), "Bearer ${CommonUtils.getInstance().getPref("Token")}"
-        ).enqueue(object : Callback<CategoryAddRes> {
-            @SuppressLint("SetTextI18n")
-            override fun onResponse(
-                call: Call<CategoryAddRes>, response: Response<CategoryAddRes>
-            ) {
-                if (response.body() != null) {
-                    if (response.body()!!.message == "ahihihihihihi") {
-                        CustomToast.showToast(
-                            context, "Tạo Category thành công", CustomToast.ToastType.SUCCESS
-                        )
-                        dismiss()
-                        onSucess()
-                    } else {
-                        CustomToast.showToast(
-                            context, "Chưa thể cập nhật bây giờ!", CustomToast.ToastType.INFO
-                        )
-                    }
-                }
-                Log.i("AddCategory", response.body().toString())
-            }
 
-            override fun onFailure(call: Call<CategoryAddRes>, t: Throwable) {
-                CustomToast.showToast(
-                    context, "Lỗi kết nối!", CustomToast.ToastType.WARNING
-                )
-                Log.e("AddCategory", "onFailure: " + t.message)
-            }
-
-        })
-    }
 }
