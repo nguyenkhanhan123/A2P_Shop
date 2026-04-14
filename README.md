@@ -111,4 +111,4 @@ Dự án được phát triển trong quá trình học tập/thực tập nhằ
 ---
 ## 📸 Demo
 
-👉 [Xem demo tại đây]([https://drive.google.com/your-link](https://drive.google.com/drive/folders/1XlHROj5GHj3e0i8y8RlQR02CiUtWKtkf))
+🔗 **[📄 Xem báo cáo chi tiết](https://drive.google.com/drive/folders/1XlHROj5GHj3e0i8y8RlQR02CiUtWKtkf)**
